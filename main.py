@@ -1,21 +1,18 @@
-import re
-from turtle import color
-from unittest import result
-
-from matplotlib import pyplot as plt
-from pyparsing import col
 from MergeSort import mergeSort
 from QuickSort import quickSort
 from HeapSort import heapSort
-import time, copy
-
+from Graphs import creatGraphs
+import time 
+import copy
+import pandas as pd
 import sys
+import glob
+
 sys.setrecursionlimit(1500)
 
 results = []
 
 # Lista todos os arquivos .txt 
-import glob
 #files = glob.glob(r"D:\Documentos\CIENCIA DA COMPUTAÇAO\4º ANO\Projeto e Análise de Algoritmos\Trabalho 1\**\*.txt", recursive=True)
 
 files = [
@@ -76,10 +73,7 @@ for file in files:
     print("tempo execução heap (ns)", exe_time, begin, end) 
     results.append(['Heap', mode, len(v_tosort), begin, end, exe_time])
 
-import pandas as pd
-
 df = pd.DataFrame(data=results, columns=['Method', 'Mode', 'N_elements', 'Begin_exe', 'End_exe', 'Exec_time'])
-print(df)
-
 df.to_excel("output.xlsx")
 
+creatGraphs(df)
