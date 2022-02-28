@@ -1,3 +1,4 @@
+from cProfile import label
 from MergeSort import mergeSort
 from QuickSort import quickSort
 from HeapSort import heapSort
@@ -17,12 +18,16 @@ results = []
 
 files = [
     r"D:\Documentos\CIENCIA DA COMPUTAÇAO\4º ANO\Projeto e Análise de Algoritmos\Trabalho 1\Aleatórios\a1000.txt",
+    r"D:\Documentos\CIENCIA DA COMPUTAÇAO\4º ANO\Projeto e Análise de Algoritmos\Trabalho 1\Aleatórios\a100.txt",
     r"D:\Documentos\CIENCIA DA COMPUTAÇAO\4º ANO\Projeto e Análise de Algoritmos\Trabalho 1\Aleatórios\a500.txt",
     r"D:\Documentos\CIENCIA DA COMPUTAÇAO\4º ANO\Projeto e Análise de Algoritmos\Trabalho 1\Decrescentes\d1000.txt",
+    r"D:\Documentos\CIENCIA DA COMPUTAÇAO\4º ANO\Projeto e Análise de Algoritmos\Trabalho 1\Decrescentes\d100.txt",
     r"D:\Documentos\CIENCIA DA COMPUTAÇAO\4º ANO\Projeto e Análise de Algoritmos\Trabalho 1\Decrescentes\d500.txt",
     r"D:\Documentos\CIENCIA DA COMPUTAÇAO\4º ANO\Projeto e Análise de Algoritmos\Trabalho 1\Ordenados\o1000.txt",
+    r"D:\Documentos\CIENCIA DA COMPUTAÇAO\4º ANO\Projeto e Análise de Algoritmos\Trabalho 1\Ordenados\o100.txt",    
     r"D:\Documentos\CIENCIA DA COMPUTAÇAO\4º ANO\Projeto e Análise de Algoritmos\Trabalho 1\Ordenados\o500.txt",
     r"D:\Documentos\CIENCIA DA COMPUTAÇAO\4º ANO\Projeto e Análise de Algoritmos\Trabalho 1\ParcialmenteOrdenados\po1000.txt",
+    r"D:\Documentos\CIENCIA DA COMPUTAÇAO\4º ANO\Projeto e Análise de Algoritmos\Trabalho 1\ParcialmenteOrdenados\po100.txt",
     r"D:\Documentos\CIENCIA DA COMPUTAÇAO\4º ANO\Projeto e Análise de Algoritmos\Trabalho 1\ParcialmenteOrdenados\po500.txt",
 ]
 
