@@ -1,13 +1,3 @@
-# Python program for implementation of MergeSort
-
-# Merges two subarrays of arr[].
-# First subarray is arr[l..m]
-# Second subarray is arr[m+1..r]
-
-def printArray(arr):
-    for i in range(len(arr)):
-        print("%d" % arr[i],end=" ")
-
 def merge(arr, l, m, r):
 	n1 = m - l + 1
 	n2 = r - m
@@ -66,18 +56,3 @@ def mergeSort(arr, l, r):
 		mergeSort(arr, l, m)
 		mergeSort(arr, m+1, r)
 		merge(arr, l, m, r)
-
-
-# Driver code to test above
-# arr = [12, 11, 13, 5, 6, 7]
-# n = len(arr)
-# print("Given array is")
-# for i in range(n):
-# 	print("%d" % arr[i],end=" ")
-
-# mergeSort(arr, 0, n-1)
-# print("\n\nSorted array is")
-# for i in range(n):
-# 	print("%d" % arr[i],end=" ")
-
-# This code is contributed by Mohit Kumra

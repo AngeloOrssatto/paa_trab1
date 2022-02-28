@@ -1,9 +1,3 @@
-# Python program for implementation of heap Sort
-
-# To heapify subtree rooted at index i.
-# n is size of heap
-
-
 def heapify(arr, n, i):
 	largest = i # Initialize largest as root
 	l = 2 * i + 1	 # left = 2*i + 1
@@ -40,13 +34,3 @@ def heapSort(arr):
 	for i in range(n-1, 0, -1):
 		arr[i], arr[0] = arr[0], arr[i] # swap
 		heapify(arr, i, 0)
-
-
-# Driver code
-# arr = [12, 11, 13, 5, 6, 7]
-# heapSort(arr)
-# n = len(arr)
-# print("Sorted array is")
-# for i in range(n):
-# 	print("%d" % arr[i],end=" ")
-# This code is contributed by Mohit Kumra
